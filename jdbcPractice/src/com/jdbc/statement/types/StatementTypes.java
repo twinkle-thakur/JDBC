@@ -3,8 +3,8 @@ package com.jdbc.statement.types;
 import com.jdbc.entity.Student;
 
 //1.Statement
-//2.PreparedStatement
-//3.CallableStatement(Will discuss after sotre procedure in mysql)
+//2.PreparedStatement(Interface)
+//3.CallableStatement(Will discuss after store procedure in mysql)
 public class StatementTypes {
 public static void main(String[] args) {
 Student stu=new Student();

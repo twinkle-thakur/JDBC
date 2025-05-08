@@ -10,6 +10,7 @@ import com.jdbc.entity.Student;
 import com.jdbc.operationV2.JdbcUtils;
 
 public class JdbcOperation {
+//Inserting data using prepareStatement	
 public static void insert(Student stu) {
 	//step 1)Load the driver
 		String query = "insert into student values (?,?,?)";
@@ -30,6 +31,7 @@ public static void insert(Student stu) {
 		e.printStackTrace();
 	}
 }
+//Update query using prepareStatement
 public static void update(Student stu) {
 	//step 1)Load the driver
 		String query = "update student set stu_name=?,college=? where roll_number=?";
@@ -50,6 +52,7 @@ public static void update(Student stu) {
 		e.printStackTrace();
 	}
 }
+//Delete using prepareStatement
 public static void deleteByRollNumber(int rollNumber) {
 	//step 1)Load the driver
 		String query = "delete from student where roll_number=?";
@@ -68,6 +71,7 @@ public static void deleteByRollNumber(int rollNumber) {
 		e.printStackTrace();
 	}
 }
+//Fetch using prepareStat..
 public static void fetchAll() {
 	//step 1)Load the driver
 		String query = "select * from student";
