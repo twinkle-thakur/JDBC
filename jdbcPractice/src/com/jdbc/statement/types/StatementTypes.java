@@ -8,13 +8,13 @@ import com.jdbc.entity.Student;
 public class StatementTypes {
 public static void main(String[] args) {
 Student stu=new Student();
-stu.setRollNumber(111);
-stu.setName("Ashok");
+stu.setRollNumber(112);
+stu.setName("Ashok1");
 stu.setCollege("IIT BHU");
-//JdbcOperation.insert(stu);
+JdbcOperation.insert(stu);
 //JdbcOperation.update(stu);
 //JdbcOperation.deleteByRollNumber(11);
-JdbcOperation.fetchAll();
+//JdbcOperation.fetchAll();
 //JdbcOperation.fetchByRollNumber(12);
 }
 }

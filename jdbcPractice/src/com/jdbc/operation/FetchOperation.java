@@ -25,6 +25,16 @@ public static void main(String[] args) throws ClassNotFoundException, SQLExcepti
 				System.out.println(resultSet.getInt(1)+" "+resultSet.getString(2)+" "+resultSet.getString(3));
 			}
 		}
+	//ResultSet is not backward compatible once it reaches null it will not go back	
+//		System.out.println("******************");
+//		if(resultSet!=null) {
+//			while(resultSet.next()) {
+//				System.out.println(resultSet.getInt(1)+" "+resultSet.getString(2)+" "+resultSet.getString(3));
+//			}
+//		}
+	//Therefore if we try to print 3 row it will not go back and throw exception	
+//		resultSet.absolute(3);
+//		System.out.println(resultSet.getInt(1)+" "+resultSet.getString(2)+" "+resultSet.getString(3));
 	//step 7)Close the resources
 		connection.close();
 		statement.close();
