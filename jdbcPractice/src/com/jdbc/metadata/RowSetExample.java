@@ -6,7 +6,8 @@ import javax.sql.rowset.RowSetProvider;
 
 //Serealization we'll discuss later
 
-//rowset is advance version of result set to fetch data with scrollable(backward)+updatable feature
+//rowset is advance version of result set to fetch data with
+//scrollable(backward+forward movement)+updatable feature
 public class RowSetExample {
 public static void main(String[] args) throws ClassNotFoundException, SQLException {
 	//step 1)Load the driver
