@@ -3,9 +3,7 @@ package com.jdbc.statement.types;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
-import java.sql.Statement;
 
 import com.jdbc.entity.Student;
 import com.jdbc.operationV2.JdbcUtils;
@@ -18,14 +16,14 @@ public class JdbcOperation {
 
 		try (Connection connection = JdbcUtils.getMysqlConnection();
 				PreparedStatement preparedStatement = connection.prepareStatement(query);) {
-			ResultSetMetaData metaData = preparedStatement.getMetaData();
+		//	ResultSetMetaData metaData = preparedStatement.getMetaData();
 		//	String columnName = metaData.getColumnName(1);
-			System.out.println(metaData.getColumnName(1)+" "+metaData.getColumnName(2)+" "+metaData.getColumnName(3));
-//			preparedStatement.setInt(1, stu.getRollNumber());
-//			preparedStatement.setString(2, stu.getName());
-//			preparedStatement.setString(3, stu.getCollege());
-//			int record = preparedStatement.executeUpdate();
-			int record=0;
+		//	System.out.println(metaData.getColumnName(1)+" "+metaData.getColumnName(2)+" "+metaData.getColumnName(3));
+			preparedStatement.setInt(1, stu.getRollNumber());
+			preparedStatement.setString(2, stu.getName());
+			preparedStatement.setString(3, stu.getCollege());
+			int record = preparedStatement.executeUpdate();
+//			int record=0;
 			if (record == 1) {
 				System.out.println("Record inserted");
 			} else {
