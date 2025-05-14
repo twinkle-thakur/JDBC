@@ -16,7 +16,7 @@ user
 Perform CURD operation
 
 1)Book
-2)BookSevice
+2)BookService
   *verifyUser(username,pass) boolean
   *deleteBook(book_id)
   *fetchBookByBookId(book_id)
